@@ -1,0 +1,98 @@
+{
+	"info": {
+		"_postman_id": "e16366db-84e4-47f6-91cc-8efef5d76efb",
+		"name": "REST_Apis_101426",
+		"description": "Rest APIs created to fetch results from the database to query students and to add details to the database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/get_students",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"get_students"
+					]
+				},
+				"description": "request used to get all students from the database"
+			},
+			"response": []
+		},
+		{
+			"name": "search_student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/search_student?student_no=123456",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"search_student"
+					],
+					"query": [
+						{
+							"key": "student_no",
+							"value": "123456"
+						}
+					]
+				},
+				"description": "A rest API used to search for students"
+			},
+			"response": []
+		},
+		{
+			"name": "add_student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"Steve Maina\",\r\n    \"email\": \"s@strathmore.edu\",\r\n    \"address\": \"370528\",\r\n    \"class_details\": \"BCOM\",\r\n    \"student_no\": \"098765\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/api/add_student",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"add_student"
+					]
+				},
+				"description": "A rest API used to insert students into the database"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
